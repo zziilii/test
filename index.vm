@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>张自立</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<link rel="stylesheet" type="text/css" href="./src/ziliReset.css">
+	<link rel="stylesheet" type="text/css" href="./src/index.css">
+</head>
+<body>
+	<h1 class="main-title">&lt;/&gt;</h1>
+	<div class="imgBox">
+		#foreach($element in $list)
+			<img src="">
+		#end
+	</div>
+	<div class="footer">
+		<p>power BY zili.zhang</p>
+	</div>
+</body>
+</html>
