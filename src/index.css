@@ -54,6 +54,7 @@ body {
 @media (min-width:640px) {
 	.center .center-logo {
 		width: 200px;
+		margin-top: 20%;
 	}
 }
 .center .center-des{
