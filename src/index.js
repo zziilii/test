@@ -2,7 +2,7 @@
  * @Author: zziil
  * @Date:   2016-05-24 19:28:59
  * @Last Modified by:   zziil
- * @Last Modified time: 2016-05-27 10:53:15
+ * @Last Modified time: 2016-05-27 21:22:13
  */
 
 'use strict';
@@ -24,10 +24,12 @@ var tenDeg = 90,
 var $ten = $('.ten'),
     $unit = $('.unit');
 
-setNumber(ten, $ten, 90);
-setTimeout(function() {
-    setNumber(unit, $unit, 270);
-}, 100)
+function initDate() {
+    setNumber(ten, $ten, 90);
+    setTimeout(function() {
+        setNumber(unit, $unit, 270);
+    }, 100)
+}
 
 function setNumber(number, el, deg) {
     var oldNum = parseInt(el.text());
@@ -64,18 +66,27 @@ function fadeIn(el, delay) {
     }
     el.css('transition', delay);
     el.css({
-        transform: 'translateY(100px)',
+        transform: 'translateY(-50px)',
         opacity: '1'
     });
 }
 
+function opacityIn(el, delay){
+    if (delay === undefined) {
+        delay = '500ms';
+    }
+    el.css('transition', delay);
+    el.css({
+        opacity: '1'
+    });
+}
 function fadeOut(el, delay) {
     if (delay === undefined) {
         delay = '500ms';
     }
     el.css('transition', delay);
     el.css({
-        transform: 'translateY(-100px)',
+        transform: 'translateY(-50px)',
         opacity: '0'
     });
 }
@@ -118,6 +129,9 @@ function spreadOut(el, delay) {
     });
 }
 
+function addClass(el, className) {
+    el.addClass(className)
+}
 /**
  * [timeLine description]
  * @param  {[type]} list [{callback:fun,argu:[a,b]}]
@@ -130,18 +144,167 @@ function timeLine(list) {
 }
 
 function doSetTimeout(i, list) {
+    if(list[i].argu === undefined){
+        list[i].argu = [];
+    }
     setTimeout(function() {
         var el = list[i];
         el.fuc.apply(this, list[i].argu);
     }, list[i].delay);
 }
 
+// timeLine([{
+//     fuc: fadeOut,
+//     argu: [$('.stage'), '500ms'],
+//     delay: '1100'
+// }, {
+//     fuc: initDate,
+//     argu: [],
+//     delay: '2100'
+// }]);
+function stage0() {
+    timeLine([{
+        fuc: fadeIn,
+        argu: [$('.stage-0'), '400ms'],
+        delay: '0'
+    }, {
+        fuc: addClass,
+        argu: [$('.base-line'), 'spreadX'],
+        delay: '1200'
+    },{
+        fuc: addClass,
+        argu: [$('.you'), 'red'],
+        delay: '500'
+    },{
+        fuc: fadeOut,
+        argu: [$('.stage-0'), '400ms'],
+        delay: '2600'
+    }]);
+}
+
+function stage1() {
+    timeLine([{
+        fuc: fadeIn,
+        argu: [$('.stage-1'), '400ms'],
+        delay: '0'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-1-1'), '400ms'],
+        delay: '400'
+    }, {
+        fuc: initDate,
+        delay: '1400'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-1-2'), '1000ms'],
+        delay: '7000'
+    },{
+        fuc: fadeOut,
+        argu: [$('.stage-1'), '500ms'],
+        delay: '8000'
+    }]);
+}
+
+function stage1() {
+    timeLine([{
+        fuc: fadeIn,
+        argu: [$('.stage-1'), '400ms'],
+        delay: '0'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-1-1'), '400ms'],
+        delay: '400'
+    }, {
+        fuc: initDate,
+        delay: '1400'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-1-2'), '1000ms'],
+        delay: '7000'
+    },{
+        fuc: fadeOut,
+        argu: [$('.stage-1'), '500ms'],
+        delay: '8000'
+    }]);
+}
+function stage1() {
+    timeLine([{
+        fuc: fadeIn,
+        argu: [$('.stage-1'), '400ms'],
+        delay: '0'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-1-1'), '400ms'],
+        delay: '400'
+    }, {
+        fuc: initDate,
+        delay: '1400'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-1-2'), '1000ms'],
+        delay: '7000'
+    },{
+        fuc: fadeOut,
+        argu: [$('.stage-1'), '500ms'],
+        delay: '8000'
+    }]);
+}
+function stage2(){
+    timeLine([{
+        fuc: fadeIn,
+        argu: [$('.stage-2'), '400ms'],
+        delay: '0'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-2-1'), '500ms'],
+        delay: '800'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-2-2'), '500ms'],
+        delay: '2000'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-2-3'), '500ms'],
+        delay: '5000'
+    },{
+        fuc: opacityIn,
+        argu: [$('.stage-2-4'), '1000ms'],
+        delay: '6000'
+    },{
+        fuc: fadeOut,
+        argu: [$('.stage-2'), '500ms'],
+        delay: '9000'
+    }]);
+}
+function stage3(){
+    
+}
+function stage4(){
+    
+}
+function stage5(){
+    
+}
+function stage6(){
+    
+}
+function stage7(){
+    
+}
+// 主时间线
 timeLine([{
-    fuc: fadeOut,
-    argu: [$('.stage'), '500ms'],
-    delay: '1100'
+    fuc: stage0,
+    delay: '200'
 }, {
-    fuc: fadeIn,
-    argu: [$('.stage'), '500ms'],
-    delay: '2100'
+    fuc: stage1,
+    delay: '4000'
+}, {
+    fuc: stage2,
+    delay: '13000'
+}, {
+    fuc: stage3,
+    delay: '4000'
+}, {
+    fuc: stage4,
+    delay: '4000'
 }]);

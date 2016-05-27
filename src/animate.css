@@ -24,6 +24,13 @@
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
+.spreadX {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-name: spreadX;
+  animation-name: spreadX;
+  animation-fill-mode: forwards;
+}
 
 .animated.flipOutX,
 .animated.flipOutY,
@@ -137,6 +144,26 @@
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes spreadX {
+  from {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+
+  70% {
+    opacity: 1;
+     -webkit-transform: scaleX(1.05);
+    transform: scaleX(1.05);
+  }
+
+  to {
+    opacity: 1;
+     -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 
