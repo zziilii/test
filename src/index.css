@@ -1,67 +1,68 @@
+/*
+* @Author: zziil
+* @Date:   2016-05-24 19:31:37
+* @Last Modified by:   zziil
+* @Last Modified time: 2016-05-27 10:42:18
+*/
+
 body {
-	background: #eee;
-	font-size: 0;
+    background-color: #eee;
+    font-weight: lighter;
+    transition: 1s;
 }
 
-.main-title {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	margin-top: 40%;
-	font-size: 50px;
-	font-weight: lighter;
-}
-
-@media (min-width:640px) {
-	.main-title {
-		margin-top: 20%;
-	}
-}
-
-.footer {
+.stage{
+	width: 320px;
 	position: absolute;
-	bottom: 0;
-	background: #ccc;
-	display: block;
-	height: 40px;
-	left: 0;
-	right: 0;
+	top: 0px;
+	left: 50%;
+    margin-left: -160px;
+}
+.time {
+    text-align: center;
+    font-size: 0;
 }
 
-.footer p {
-	font-size: 16px;
-	color: #666;
+.time .day-box {
+    font-size: 0px;
+    font-weight: lighter;
+    -webkit-perspective: 200;
+    perspective: 200;
+}
+
+.time .day-box span {
+    font-size: 30px;
+    vertical-align: bottom;
+    line-height: 1;
+    display: inline-block;
+}
+.blue{
+    color: #3088ff;
+}
+.time .day-box .ten,
+.time .day-box .unit {
+    font-size: 80px;
+    line-height: 60px;
+    transition: 0.5s linear;
+    width: 50px;
+}
+
+.time .day-box .unit {
+}
+.time .p{
+    font-size: 30px;
+}
+.center{
 	text-align: center;
 	line-height: 40px;
-	font-weight: lighter;
-	vertical-align: middle;
+	font-size: 20px;
 }
-.center .center-logo{
-	display: block;
-	width: 40%;
-	margin: auto;
-	margin-top: 40%;
-	border-radius: 50%;
+.hide{
+	opacity: 0;
 }
-
-.center .center-title{
-	font-size: 50px;
-	font-weight: lighter;
-	text-align: center;
-	margin-top: 20px;
-
-}
-@media (min-width:640px) {
-	.center .center-logo {
-		width: 200px;
-		margin-top: 20%;
-	}
-}
-.center .center-des{
-	font-size: 14px;
-	line-height: 20px;
-	color: #666;
-	text-align: center;
-	margin-top: 20px;
-	font-weight: lighter;
+.blur { 
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);
 }
