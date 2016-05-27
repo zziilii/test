@@ -8,7 +8,7 @@
 body {
     background-color: #eee;
     font-weight: lighter;
-    transition: 1s;
+    transition: 2.5s;
 }
 
 .stage{
@@ -104,4 +104,53 @@ body {
 }
 .mt-l{
     margin-top: 50px;
+}
+.mt-m{
+    margin-top: 150px;
+}
+.goal .cut{
+    width: 80px;
+    height: 100px;
+    float: left;
+}
+.single-cut{
+    width: 80px;
+    height: 80px;
+    margin: 50px auto;
+}
+.single-cut img{
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+}
+.goal .cut img{
+    width: 48px;
+}
+.single-cut .cover{
+    margin-top: -48px;
+}
+.goal .cut p{
+    font-size: 12px;
+}
+.strong{
+    font-weight: bold;
+}
+.album img{
+    border-radius: 100%;
+    width: 60px;
+    opacity: 0;
+}
+.life{
+    font-size: 24px;
+    color: #eee;
+}
+.white{
+    color: #fff;
+}
+.tusiji{
+    font-size: 24px;
+}
+.hand{
+    font-family: 'snellroundhand';
 }
