@@ -199,10 +199,10 @@ function stage1() {
     },{
         fuc: opacityIn,
         argu: [$('.stage-1-1'), '400ms'],
-        delay: '400'
+        delay: '700'
     }, {
         fuc: initDate,
-        delay: '1400'
+        delay: '1700'
     },{
         fuc: opacityIn,
         argu: [$('.stage-1-2'), '1000ms'],
@@ -214,50 +214,7 @@ function stage1() {
     }]);
 }
 
-function stage1() {
-    timeLine([{
-        fuc: fadeIn,
-        argu: [$('.stage-1'), '400ms'],
-        delay: '0'
-    },{
-        fuc: opacityIn,
-        argu: [$('.stage-1-1'), '400ms'],
-        delay: '400'
-    }, {
-        fuc: initDate,
-        delay: '1400'
-    },{
-        fuc: opacityIn,
-        argu: [$('.stage-1-2'), '1000ms'],
-        delay: '7000'
-    },{
-        fuc: fadeOut,
-        argu: [$('.stage-1'), '500ms'],
-        delay: '8000'
-    }]);
-}
-function stage1() {
-    timeLine([{
-        fuc: fadeIn,
-        argu: [$('.stage-1'), '400ms'],
-        delay: '0'
-    },{
-        fuc: opacityIn,
-        argu: [$('.stage-1-1'), '400ms'],
-        delay: '400'
-    }, {
-        fuc: initDate,
-        delay: '1400'
-    },{
-        fuc: opacityIn,
-        argu: [$('.stage-1-2'), '1000ms'],
-        delay: '7000'
-    },{
-        fuc: fadeOut,
-        argu: [$('.stage-1'), '500ms'],
-        delay: '8000'
-    }]);
-}
+
 function stage2(){
     timeLine([{
         fuc: fadeIn,
@@ -461,6 +418,10 @@ function stage8(){
     },{
         fuc: fadeIn,
         argu: [$('.stage-8-2'), '500ms'],
+        delay: '2500'
+    },{
+        fuc: fadeIn,
+        argu: [$('.stage-8-3'), '500ms'],
         delay: '2500'
     }]);
 }
