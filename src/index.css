@@ -155,3 +155,8 @@ body {
     font-family: 'bradley hand','snellroundhand';
     font-size: 26px;
 }
+.border{
+    margin: 0 15px;
+    padding: 5px 0 15px;
+    border: 1px solid;
+}

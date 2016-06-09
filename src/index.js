@@ -425,34 +425,48 @@ function stage8(){
         delay: '2500'
     }]);
 }
+function  stageX () {
+    timeLine([{
+        fuc: fadeIn,
+        argu: [$('.stage-X'), '400ms'],
+        delay: '0'
+    },{
+        fuc: fadeOut,
+        argu: [$('.stage-X'), '500ms'],
+        delay: '15000'
+    }]);
+}
 // 主时间线
 timeLine([{
     fuc: stage0,
     delay: '200'
-}, {
-    fuc: stage1,
+},{
+    fuc: stageX,
     delay: '4000'
 }, {
+    fuc: stage1,
+    delay: '24000'
+}, {
     fuc: stage2,
-    delay: '13000'
+    delay: '33000'
 }, {
     fuc: stage3,
-    delay: '22000'
+    delay: '42000'
 }, {
     fuc: stage4,
-    delay: '31000'
+    delay: '51000'
 }, {
     fuc: stage5,
-    delay: '37000'
+    delay: '57000'
 }, {
     fuc: stage6,
-    delay: '46000'
+    delay: '66000'
 }, {
     fuc: stage7,
-    delay: '53000'
+    delay: '73000'
 }, {
     fuc: stage8,
-    delay: '58000'
+    delay: '88000'
 }]);
 // timeLine( [{
 //     fuc: stage5,
